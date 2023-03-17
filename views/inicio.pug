@@ -1,0 +1,28 @@
+extends ./layout/index
+block slider 
+    .slider 
+        h1 Rio de janeiro 
+        em aventura
+block contenido 
+    main.container.mt-5
+    h2.text-center.mb-5 Sobre Nosotros
+    .row 
+        .row.mb-5 
+            .col-md-6 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea architecto corrupti natus praesentium incidunt ut rem, illo officiis numquam cumque quas recusandae, fugit nemo et molestias! Voluptatibus ipsum officia voluptatem!
+
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="img-us" class="img-fluid")
+    include blocke_viajes
+    .descuento 
+        .container 
+            .row 
+                .col-md-6
+                    .contenido 
+                        h3 5% de descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 marzo de 2023
+                        p.precio 2,500 USD               
+    .container 
+        h2.mt-5.text-center Testimoniales 
+        include blocke_testimonial                   

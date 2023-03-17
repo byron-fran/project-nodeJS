@@ -1,0 +1,31 @@
+extends ./layout/index
+
+block contenido 
+    main.container
+        .row 
+            .col-md-5 
+                img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, alt="imagen_destino" class="img-fluid")
+            .col-md-7
+                h1 #{viaje.titulo}
+                 p 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="3" y="4" width="18" height="4" rx="2" />
+                        <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+                        <line x1="10" y1="12" x2="14" y2="12" />
+                    </svg> #{viaje.fecha_ida}| #{viaje.fecha_vuelta}
+                p 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-friends" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="7" cy="5" r="2" />
+                        <path d="M5 22v-5l-1 -1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5" />
+                        <circle cx="17" cy="5" r="2" />
+                        <path d="M15 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4" />
+                    </svg> #{viaje.disponibles} Disponible
+                p 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-currency-euro" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M17.2 7a6 7 0 1 0 0 10" />
+                        <path d="M13 10h-8m0 4h8" />
+                    </svg> #{viaje.precio} Euros
+                p #{viaje.descripcion}

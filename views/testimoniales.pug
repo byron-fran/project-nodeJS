@@ -1,0 +1,27 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+        blockquote.text-center Lee sobre los testimoniales de nuestros clientes
+        include blocke_testimonial
+        .row 
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega un Comentario
+                if(errores)
+                    each error in errores
+                        div.alert.col.alert-danger.text-center #{error.mensaje}
+
+            .row.justify-content-center.col 
+                .col-md-8 
+                    form( action="/testimoniales" method ='POST' autocomplete = "off" )
+                        .form-group 
+                            label(for="nombre") Nombre 
+                            input(type="text" id="nombre",name="nombre", placeholder="Escribe tu Nombre" class="form-control")
+                        .form-group 
+                            label(for="correo") Correo
+                            input(type="text" id="correo",name="correo", placeholder="Escribe tu Correo" class="form-control") 
+                        .form-group 
+                            label(for="mensaje") Mensaje
+                            textarea(name="mensaje", cols="30", rows="10" id="mensaje" class="form-control")  #{mensaje}        
+                        input(type="submit" class="form-control btn btn-success btn-block")    
